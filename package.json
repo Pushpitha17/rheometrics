@@ -13,6 +13,8 @@
     "@fast-csv/format": "^5.0.0",
     "@hookform/resolvers": "^3.3.4",
     "@reduxjs/toolkit": "^2.2.4",
+    "@tanstack/react-query": "^5.37.1",
+    "@tanstack/react-query-devtools": "^5.40.0",
     "@tauri-apps/api": "^1",
     "@types/d3": "^7.4.3",
     "@types/react-router": "^5.1.20",
@@ -37,6 +39,7 @@
     "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^5.35.6",
     "@tauri-apps/cli": "^1.5.12",
     "@types/plotly.js": "^2.29.4",
     "@types/react": "^18.2.15",

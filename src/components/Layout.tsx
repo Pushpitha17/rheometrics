@@ -1,10 +1,10 @@
 import { useState } from "react"
 import type { MenuProps } from "antd"
-import { Breadcrumb, Layout, Menu, theme } from "antd"
+import {  Layout, Menu } from "antd"
 import { FileLineChart } from "lucide-react"
 import { Link, Outlet } from "react-router-dom"
 
-const { Header, Content, Footer, Sider } = Layout
+const { Content, Sider } = Layout
 
 type MenuItem = Required<MenuProps>["items"][number]
 

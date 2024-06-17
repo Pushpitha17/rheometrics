@@ -12,9 +12,24 @@
   "tauri": {
     "allowlist": {
       "all": true,
+      "http": {
+        "all": true, 
+        "request": true,
+        "scope": ["http://**"]
+      },
       "shell": {
         "all": false,
-        "open": true
+        "open": true,
+        "sidecar": true,
+        "scope": [
+          {
+            "name": "../src-python/dist/backend",
+            "sidecar": true,
+            "args": [
+              "version"
+            ]
+          }
+        ]
       }
     },
     "windows": [
@@ -28,6 +43,9 @@
       "csp": null
     },
     "bundle": {
+      "externalBin": [
+        "../src-python/dist/backend"
+      ],
       "active": true,
       "targets": "all",
       "identifier": "com.tauri.dev",

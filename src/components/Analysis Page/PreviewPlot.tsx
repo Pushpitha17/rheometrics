@@ -14,12 +14,12 @@ import {
   Legend,
   PointElement
 } from "chart.js"
-import COLORS from "./colors"
+import COLORS from "./COLORS"
 
 function PreviewPlot({ containerWidth }: { containerWidth: number }) {
   Chart.register(LinearScale, LineElement, Title, Tooltip, Legend, PointElement)
 
-  const [PlotData, setPlotData] = useState({
+  const [PlotData, setPlotData] = useState<{ datasets: any[] }>({
     datasets: []
   })
 
@@ -120,20 +120,20 @@ function PreviewPlot({ containerWidth }: { containerWidth: number }) {
       y: {
         title: {
           display: true,
-          text: "Torque(dNm)",
+          text: "Torque(dNm)"
         }
       }
     },
     plugins: {
       title: {
         display: true,
-        text: 'Entered Rheometer Data',
+        text: "Entered Rheometer Data"
       },
       legend: {
         position: "right" as const,
-        align: "center" as const, 
-      },
-    },
+        align: "center" as const
+      }
+    }
   }
 
   return (

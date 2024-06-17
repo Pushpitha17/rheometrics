@@ -1,19 +1,18 @@
 import { Card, Space } from "antd"
 import { Col, Row } from "antd"
 import { Input, Radio } from "antd"
-import { Button, Checkbox, Form } from "antd"
+import { Button, Form } from "antd"
 import { UploadOutlined } from "@ant-design/icons"
 import type { UploadProps } from "antd"
-import { message, Upload } from "antd"
-import { Divider, Typography } from "antd"
+import { Upload } from "antd"
+import { Typography } from "antd"
 import UploadedTable from "./UploadedTable"
 import { FormItem } from "react-hook-form-antd"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
-import { useWatch } from "react-hook-form"
-import { useForm, FormProvider, useFormContext } from "react-hook-form"
+import { useForm, FormProvider } from "react-hook-form"
 
-const { Title, Paragraph, Text, Link } = Typography
+const { Title, Text } = Typography
 
 const schema = z.object({
   type: z.string().nonempty(),
@@ -101,7 +100,11 @@ function FileUpload() {
                       label="Temp"
                       style={{ marginBottom: "0" }}
                     >
-                      <Input addonAfter={"°C"} type="number" style={{ width: 100 }} />
+                      <Input
+                        addonAfter={"°C"}
+                        type="number"
+                        style={{ width: 100 }}
+                      />
                     </FormItem>
                   </Col>
                 </Row>

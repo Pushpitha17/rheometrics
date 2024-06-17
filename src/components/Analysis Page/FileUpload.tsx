@@ -23,8 +23,6 @@ function FileUpload() {
   const dispatch = useDispatch()
   const files = useSelector(selectFiles)
 
-  console.log("redux", files)
-
   const props: UploadProps = {
     name: "file",
     multiple: false,
